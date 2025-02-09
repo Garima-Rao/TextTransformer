@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextTransformer-Contact</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+      body{
+        background-color: burlywood;
+      }
+      .contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+       
+      }
+      .contact h2{
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+      form{
+       width: 30%;
+       padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 10px;
+        background-color: white;
+      }
+     .details{
+      display: flex;
+      gap: 3px;
+     }
+     .buttons{
+      display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+     }
+     .buttons button{
+      margin: 0px 30px;
+     }
+     @media (max-width: 768px) {
+        form {
+          width: 100%; /* Makes form full width on mobile */
+        }
+        .details {
+          flex-direction: column; /* Stacks input fields on smaller screens */
+        }
+        .buttons {
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+        .buttons button {
+          width: 100%; /* Buttons take full width on small screens */
+        }
+      }
+  </style>
+</head>
+<body>
+   
+        <div class="contact">
+          <form action="">
+            <h2>Contact Form</h2>
+          <div class="mb-3 details">
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Full name">
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Subject</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Subject">
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"col="20"placeholder="enter the message"></textarea>
+          </div>
+          <div class="buttons">
+          <a href="#"><button type="button" class="btn btn-outline-success">Submit Form</button></a> 
+          <a href="{% url 'index' %}"> <button type="button" class="btn btn-outline-danger">Back to Home</button></a>
+        </div>
+        </div>
+      </form>
+</body>
+</html>

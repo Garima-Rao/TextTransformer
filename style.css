@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   background-image: url("https://images.unsplash.com/photo-1607971584791-aca00eb17fd5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   text-align: center;
+}
+
+/* Main Content Styling */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    position: relative;
+}
+
+/* Heading */
+h1 {
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 15%;
+    font-size: 2.5rem;
+}
+
+/* Paragraph */
+.para {
+    text-align: center;
+    width: 70%;
+    max-width: 600px;
+    color: rgb(159, 158, 158);
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+
+/* Start Button */
+.start {
+    display: block;
+    margin: 30px auto;
+}
+.start button {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgb(231, 197, 127);
+}
+.logo {
+    font-weight: 800;
+}
+.nav-item {
+    font-weight: 600;
+}
+
+/* Language Selector */
+#language-selector {
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .content {
+        width: 95%;
+        padding: 10px;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-top: 20%;
+    }
+    .para {
+        font-size: 1rem;
+        width: 80%;
+        padding: 0 10px;
+    }
+    .start button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    height: 100%; /* Ensures full height without overflow */
+    overflow: hidden; /* Removes both horizontal and vertical scrollbars */
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   /* background-image: url("https://img.freepik.com/free-vector/elegant-dark-background-with-golden-details_23-2148438266.jpg?t=st=1736790511~exp=1736794111~hmac=afc3dcaa6275b36a1be0078b6f59db1490921f0c25c5b9fc067c333ffdcdb17d&w=740"); */
+   /* background-color: #f0f8ff; */
+   background-blend-mode: lighten;
+   /* opacity: 0.9; */
+}
+.heading{
+    /* margin-top: 20px; */
+    height: 100vh;
+    background-color: cadetblue;
+    text-align: center;
+
+}
+.heading h1,h4{
+    position: relative;
+    top: 40%;
+}
+.heading span {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    background-clip: text;  /* Standard version */
+    -webkit-background-clip: text;  /* Fallback for WebKit browsers */
+    -webkit-text-fill-color: transparent;  /* WebKit browsers */
+    color: #ff7e5f; /* Fallback solid color if gradient is not supported */
+}
+
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.form{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;   
+    background-color: rgb(245, 212, 172);
+    height: 100vh;
+    width: 100%;
+}
+.form form{
+    margin-left: 50px;
+}
+.form textarea {
+    width: 90%; /* Makes it responsive */
+    min-height: 150px; /* Ensures it has a good height */
+    padding: 10px; /* Improves text spacing */
+    font-size: 16px; /* Increases readability */
+    border: 1px solid black;
+    border-radius: 5px; /* Soft corners */
+    resize: vertical; /* Allows resizing only vertically */
+    outline: none; /* Removes default focus outline */
+    margin-top: 70px;
+}
+
+/* Make form align well on mobile */
+@media (max-width: 768px) {
+    .form form {
+        margin-left: 5%; /* Adjusts margin for small screens */
+    }
+    
+    .form textarea {
+        width: 95%; /* Uses more screen space */
+        min-height: 120px; /* Slightly reduces height for smaller screens */
+    }
+}
+

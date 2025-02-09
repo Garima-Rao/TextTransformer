@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+    <script>
+        window.onload= function() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en', 
+                    includedLanguages: 'en,es,fr,hi', 
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                },
+                'language-selector'
+            );
+        }
+    </script>
+</head>
+<body >
+    <nav class="navbar navbar-light navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand logo" href="{% url 'started' %}">
+                <!-- <img src="{% static 'logo1.png' %}" alt="Image" width="50" height="40"class="d-inline-block align-text-top"> -->
+               TextTransformer
+            </a>
+          
+            <ul class="nav justify-content-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'about2' %}">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'help' %}">Help</a>
+              </li>
+            </ul>
+                
+                <div id="language-selector">
+                  <!-- <option value="en">English</option>
+                  <option value="es">Spanish</option>
+                  <option value="fr">French</option>
+                  <option value="hi">हिंदी (Hindi)</option> -->
+                  <!-- Add more languages as needed -->
+                </div>
+              
+              </div>
+            </nav>
+    
+        <!-- <h2>Welcome to TextTransformer</h2> -->
+         <div class="content">
+        <h1>Transform Your Text, Elevate Your Work.</h1>
+        <p class="para">"Welcome to TextTransform – your go-to tool for seamless text editing! From removing extra spaces to converting text to uppercase or lowercase, and even stripping out punctuation, we make text transformation quick and easy. Simplify your writing tasks in just a few clicks!"</p>
+        <!-- <button type="button" class="btn btn-warning">Warning</button> -->
+        <a href="{% url 'started' %}"class="start"> <button type="button" class="btn warn btn-outline-warning ">Let's Started</button></a>
+      </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+</script>
+</body>
+</html>
